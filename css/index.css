@@ -57,7 +57,7 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
 #about .right ul li.education i{margin-top: -16px;}
 
 /* skills====================================================================================== */
-#skills{background:#fff;}
+#skills{background:#fff; color:#000;}
 #skills h2{padding-bottom: 80px;}
 #skills h2+div{display: inline-block;}
 #skills .rotateW{width: 20%;}
@@ -93,6 +93,8 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
     padding: 45px 45px; box-sizing: border-box;
 }
 #skills .rotate .back li{list-style: square; word-break: keep-all;}
+
+#skills span{padding: 70px 0;}
 
 /* portfolio=================================================================================== */
 #portfolio{background: #d6625159; overflow: hidden;}
