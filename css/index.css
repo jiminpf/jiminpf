@@ -1,0 +1,137 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* reset, common ============================================================================== */
+*{margin: 0; padding: 0;}
+body{font-family: 'NanumSquare', sans-serif;}
+a{text-decoration: none; display: inline-block; color:#000;}
+li{list-style: none;}
+img{max-width: 100%; }
+label, span{display: inline-block;}
+.blind{position: absolute; left:-9999px; font-size:0; visibility: hidden;}
+.center{width: 1200px; margin:0 auto; position: relative;}
+
+/* header====================================================================================== */
+header>div{
+    background:transparent; color: #fff;
+    width: 100%; height: 60px;
+    position: fixed; top: 0; left: 0; 
+    z-index: 9999;
+}
+header>div.scroll{background:#42615A; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);}
+header a{color: #fff;}
+header h1{display: inline-block; line-height:60px; font-size: 20px; font-weight: 100; margin-left:60px;}
+header h1 a:nth-of-type(2){display: none;}
+header nav{position: absolute; top: 0; right: 0;}
+header nav ul{overflow: hidden;}
+header nav ul li{float: left; margin-right: 30px; line-height: 60px;}
+header nav ul li:last-of-type{margin-right: 60px;}
+header nav ul li:hover a{text-decoration: underline;}
+header nav ul li.active a{color: #D66251; font-weight: 900;}
+
+
+/* section common============================================================================== */
+.content{padding: 100px 0; text-align: center;}
+
+/* about======================================================================================= */
+#about{
+    background: url(../img/about_bg.jpg) no-repeat center;
+    background-size: cover;
+    color:#fff;
+    padding: 200px 0 ;text-align: left;
+}
+#about .center{overflow: hidden; padding-top: 100px;}
+#about .left{padding-bottom: 100px; opacity: 0; transition: 3s; position: relative; left:-100px; display: inline-block;}
+#about .left h2{font-size: 40px; font-weight: 400;}
+#about .left p:first-of-type{font-size:20px; padding-bottom: 15px;}
+#about .left p:last-of-type{padding-top: 10px; padding-bottom: 30px;}
+
+#about .right{
+    display: inline-block;
+    font-weight: lighter; font-size: 14px;
+}
+#about .right{float: right; position: relative; right: 200px;}
+#about .right ul{text-align: center;}
+#about .right ul li{line-height: 18px; padding-bottom: 30px; text-align: left;}
+#about .right ul li i{font-size:20px; vertical-align:middle; padding-right: 10px;}
+#about .right ul li.education i{margin-top: -16px;}
+
+/* skills====================================================================================== */
+#skills{background:#fff;}
+#skills h2{padding-bottom: 80px;}
+#skills h2+div{display: inline-block;}
+#skills .rotateW{width: 20%;}
+#skills .rotate{
+    width: 200px; height: 200px;
+    display: inline-block;
+    position: relative;
+}
+#skills .rotate > *{
+    backface-visibility: hidden;
+    transition: 0.5s;
+}
+#skills .rotate .front{transform: rotateY(0deg);}
+#skills .rotate:hover .front{transform:rotateY(180deg);}
+
+#skills .rotate .back{
+    display: inline-block;
+    width: 180px; height: 180px; border-radius: 50%;
+    background: #000;
+    position: absolute; left: 50%; top: 50%; 
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
+#skills .rotate:hover .back{transform: translate(-50%, -50%) rotateY(0deg);}
+
+#skills .rotate .html{background: #f0652a; color: #fff;}
+#skills .rotate .css{background: #33a9dc; color: #fff;}
+#skills .rotate .js{background: #f0db4f; color: #323330;}
+#skills .rotate .photo{background: #001d26; color: #00c8ff;}
+#skills .rotate .illust{background: #261300; color: #ff7c00;}
+
+#skills .rotate .back ul{
+    display: inline-block;
+    width: 180px; height: 180px; border-radius: 50%;
+    padding: 45px 35px; box-sizing: border-box;
+}
+#skills .rotate .back li{list-style: square;}
+
+/* portfolio=================================================================================== */
+#portfolio{background: #d6625159; overflow: hidden;}
+#portfolio h2{padding-bottom: 80px;}
+#portfolio .portfolio_slide{display: inline-block; width:800px;}
+#portfolio .swiper-pagination-bullet{
+    background-color: #eee; width: 15px; height:15px;
+}
+#portfolio .swiper-pagination-bullet-active{background-color: #d6625159;}
+
+
+/* #contact====================================================================================== */
+#contact{
+    background: #232D2B; color: #fff; 
+    padding: 100px 0; box-sizing: border-box;
+    text-align: center;
+}
+#contact .email{padding-bottom: 15px; font-size: 25px;}
+#contact .copyright{font-size: 12px; font-weight: 100;}
+
+/* 미디어쿼리 =========================================================================== */
+/* 모바일 */
+@media screen and (max-width:767px){
+    /* common */
+    .center{width: 100vw; text-align: center; }
+
+    /* header */
+    header h1 a:first-of-type{display: none;}
+    header h1 a:nth-of-type(2){display: inline-block; margin-left: -40px;}
+    header nav ul li{float: left; margin-right: 20px;}
+    header nav ul li:last-of-type{margin-right: 20px;}
+
+    /* #about */
+    article#about.content{padding-bottom: 50px;}
+    #about .center{overflow: hidden; padding-top: 0;}
+    #about div.left{display: block; padding : 0 40px 40px 40px;}
+    #about div.right{float:none; right:0; display: block; text-align: center; padding: 0 40px;}
+    #about div.right ul{display: inline-block;}
+
+    #portfolio .portfolio_slide{width: 100vw;}
+};
