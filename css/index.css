@@ -75,8 +75,7 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
 
 #skills .rotate .back{
     display: inline-block;
-    width: 180px; height: 180px; border-radius: 50%;
-    background: #000;
+    width: 200px; height: 200px; border-radius: 50%;
     position: absolute; left: 50%; top: 50%; 
     transform: translate(-50%, -50%) rotateY(180deg);
 }
@@ -90,10 +89,10 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
 
 #skills .rotate .back ul{
     display: inline-block;
-    width: 180px; height: 180px; border-radius: 50%;
-    padding: 45px 35px; box-sizing: border-box;
+    width: 200px; height: 200px; border-radius: 50%;
+    padding: 45px 45px; box-sizing: border-box;
 }
-#skills .rotate .back li{list-style: square;}
+#skills .rotate .back li{list-style: square; word-break: keep-all;}
 
 /* portfolio=================================================================================== */
 #portfolio{background: #d6625159; overflow: hidden;}
