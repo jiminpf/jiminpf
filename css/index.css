@@ -90,7 +90,7 @@ header nav ul li.active a{font-weight: 900;}
 }
 #skills ul.skill li ul li{list-style: square;}
 #skills ul.skill li:hover ul{bottom: 0;}
-#skills span{font-size: 20px; padding: 70px 0;}
+#skills div:last-of-type{font-size: 20px; padding: 70px 0;}
 
 /* portfolio=================================================================================== */
 #portfolio{background: #eee;}
