@@ -70,6 +70,7 @@ header nav ul li.active a{font-weight: 900;}
 #skills ul.skill>li{
     position: relative;
     float: left;
+    font-size: 15px;
     width:250px; height:250px;
     color: #fff;
     overflow: hidden;
