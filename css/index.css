@@ -10,24 +10,32 @@ img{max-width: 100%; }
 label, span{display: inline-block;}
 .blind{position: absolute; left:-9999px; font-size:0; visibility: hidden;}
 .center{width: 1200px; margin:0 auto; position: relative;}
+.clearfix:before, .clearfix:after {
+    display: block; 
+    content: ' '; 
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
 
 /* header====================================================================================== */
 header>div{
-    background:transparent; color: #fff;
+    background:transparent;
     width: 100%; height: 60px;
     position: fixed; top: 0; left: 0; 
     z-index: 9999;
 }
-header>div.scroll{background:#42615A; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);}
-header a{color: #fff;}
-header h1{display: inline-block; line-height:60px; font-size: 20px; font-weight: 100; margin-left:60px;}
+header>div.scroll{background:#333; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);}
+header>div.scroll a{color: #fff;}
+header h1{display: inline-block; line-height:60px; font-size: 20px; font-weight: 900; margin-left:60px;}
 header h1 a:nth-of-type(2){display: none;}
 header nav{position: absolute; top: 0; right: 0;}
 header nav ul{overflow: hidden;}
 header nav ul li{float: left; margin-right: 30px; line-height: 60px;}
 header nav ul li:last-of-type{margin-right: 60px;}
 header nav ul li:hover a{text-decoration: underline;}
-header nav ul li.active a{color: #D66251; font-weight: 900;}
+header nav ul li.active a{font-weight: 900;}
 
 
 /* section common============================================================================== */
@@ -35,16 +43,16 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
 
 /* about======================================================================================= */
 #about{
-    background: url(../img/about_bg.jpg) no-repeat center;
+    background: url(../img/about_bg2.jpg) no-repeat center;
     background-size: cover;
-    color:#fff;
     padding: 200px 0 ;text-align: left;
+    color: #fff;
 }
 #about .center{overflow: hidden; padding-top: 100px;}
 #about .left{padding-bottom: 100px; opacity: 0; transition: 3s; position: relative; left:-100px; display: inline-block;}
-#about .left h2{font-size: 40px; font-weight: 400;}
-#about .left p:first-of-type{font-size:20px; padding-bottom: 15px;}
-#about .left p:last-of-type{padding-top: 10px; padding-bottom: 30px;}
+#about .left h2{font-size: 60px; font-weight: 400;}
+#about .left p:first-of-type{font-size:30px; padding-bottom: 15px;}
+#about .left p:last-of-type{font-size:20px; padding-top: 10px; padding-bottom: 30px;}
 
 #about .right{
     display: inline-block;
@@ -57,82 +65,61 @@ header nav ul li.active a{color: #D66251; font-weight: 900;}
 #about .right ul li.education i{margin-top: -16px;}
 
 /* skills====================================================================================== */
-#skills{background:#fff; color:#000;}
-#skills h2{padding-bottom: 80px;}
-#skills h2+div{display: inline-block;}
-#skills .rotateW{width: 20%;}
-#skills .rotate{
-    width: 200px; height: 200px;
-    display: inline-block;
+#skills h2{padding-bottom: 80px; font-size: 50px; font-weight: 900;}
+#skills ul.skill{display: inline-block;}
+#skills ul.skill>li{
     position: relative;
+    float: left;
+    width:250px; height:250px;
+    color: #fff;
+    overflow: hidden;
 }
-#skills .rotate > *{
-    backface-visibility: hidden;
-    transition: 0.5s;
+#skills ul.skill li.html{background: url(../img/html.jpg) center no-repeat;}
+#skills ul.skill li.css{background: url(../img/css.jpg) center no-repeat;}
+#skills ul.skill li.js{background: url(../img/js.jpg) center no-repeat;}
+#skills ul.skill li.photoshop{background: url(../img/photo.jpg) center no-repeat;}
+#skills ul.skill li.illust{background: url(../img/illust.jpg) center no-repeat;}
+#skills ul.skill li ul {
+    position: absolute;
+    bottom: -250px; left: 0;
+    width: 250px; height: 250px;
+    padding: 60px 30px 60px 50px; box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.65);
+    transition: 1s;
+    text-align: left;
 }
-#skills .rotate .front{transform: rotateY(0deg);}
-#skills .rotate:hover .front{transform:rotateY(180deg);}
-
-#skills .rotate .back{
-    display: inline-block;
-    width: 200px; height: 200px; border-radius: 50%;
-    position: absolute; left: 50%; top: 50%; 
-    transform: translate(-50%, -50%) rotateY(180deg);
-}
-#skills .rotate:hover .back{transform: translate(-50%, -50%) rotateY(0deg);}
-
-#skills .rotate .html{background: #f0652a; color: #fff;}
-#skills .rotate .css{background: #33a9dc; color: #fff;}
-#skills .rotate .js{background: #f0db4f; color: #323330;}
-#skills .rotate .photo{background: #001d26; color: #00c8ff;}
-#skills .rotate .illust{background: #261300; color: #ff7c00;}
-
-#skills .rotate .back ul{
-    display: inline-block;
-    width: 200px; height: 200px; border-radius: 50%;
-    padding: 45px 45px; box-sizing: border-box;
-}
-#skills .rotate .back li{list-style: square; word-break: keep-all;}
-
-#skills span{padding: 70px 0;}
+#skills ul.skill li ul li{list-style: square;}
+#skills ul.skill li:hover ul{bottom: 0;}
+#skills span{font-size: 20px; padding: 70px 0;}
 
 /* portfolio=================================================================================== */
-#portfolio{background: #d6625159; overflow: hidden;}
-#portfolio h2{padding-bottom: 80px;}
-#portfolio .portfolio_slide{display: inline-block; width:800px;}
-#portfolio .swiper-pagination-bullet{
-    background-color: #eee; width: 15px; height:15px;
+#portfolio{background: #eee;}
+#portfolio h2{padding-bottom: 80px; font-size: 50px; font-weight: 900;}
+#portfolio ul li{
+    display: inline-block; position: relative;
+    width: 400px; height: 500px; margin: 0 20px;
+    background: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-#portfolio .swiper-pagination-bullet-active{background-color: #d6625159;}
+#portfolio ul li .thumbnail{margin: 40px 50px; width: 300px; height: 200px;}
+#portfolio ul .ediya .thumbnail{background: url(../img/ediya1.jpg) no-repeat center;}
+#portfolio ul .kyochon .thumbnail{background: url(../img/kyochon1.jpg) no-repeat center;}
 
-
+#portfolio ul li .number{display: inline-block; font-size: 30px; font-weight: 900; color: #777;  margin-top: -20px;}
+#portfolio ul li .pf_title{display: inline-block; font-size: 20px; font-weight: 600; padding-left: 10px; padding-bottom: 18px;}
+#portfolio ul li a{
+    display: inline-block;
+    width: 300px; height: 50px; border: 1.5px solid #666; box-sizing: border-box;
+    color: #666; font-weight: bold;
+    text-align: center; line-height: 50px;
+    position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+    transition: 0.7s;
+}
+#portfolio ul li a:hover{background: #666; color: #fff;}
 /* #contact====================================================================================== */
 #contact{
-    background: #232D2B; color: #fff; 
-    padding: 100px 0; box-sizing: border-box;
+    background: #333; color: #fff; 
+    padding: 50px 0; box-sizing: border-box;
     text-align: center;
 }
 #contact .email{padding-bottom: 15px; font-size: 25px;}
 #contact .copyright{font-size: 12px; font-weight: 100;}
-
-/* 미디어쿼리 =========================================================================== */
-/* 모바일 */
-@media screen and (max-width:767px){
-    /* common */
-    .center{width: 100vw; text-align: center; }
-
-    /* header */
-    header h1 a:first-of-type{display: none;}
-    header h1 a:nth-of-type(2){display: inline-block; margin-left: -40px;}
-    header nav ul li{float: left; margin-right: 20px;}
-    header nav ul li:last-of-type{margin-right: 20px;}
-
-    /* #about */
-    article#about.content{padding-bottom: 50px;}
-    #about .center{overflow: hidden; padding-top: 0;}
-    #about div.left{display: block; padding : 0 40px 40px 40px;}
-    #about div.right{float:none; right:0; display: block; text-align: center; padding: 0 40px;}
-    #about div.right ul{display: inline-block;}
-
-    #portfolio .portfolio_slide{width: 100vw;}
-};

@@ -35,28 +35,6 @@ $(function(){
    });
 
 
-   // 슬라이드
-   var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      loop:true,
-      autoplay: {
-         delay: 2500,
-         disableOnInteraction: true,
-      },
-    });
 
-    $('.swiper-container').on({
-      mouseenter:function(){
-          swiper.autoplay.stop();
-      },
-      mouseleave:function(){
-          swiper.autoplay.start();
-      }
-   })
 
 });
