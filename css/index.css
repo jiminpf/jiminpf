@@ -64,35 +64,6 @@ header nav ul li.active a{font-weight: 900;}
 #about .right ul li i{font-size:20px; vertical-align:middle; padding-right: 10px;}
 #about .right ul li.education i{margin-top: -16px;}
 
-/* skills====================================================================================== */
-#skills h2{padding-bottom: 80px; font-size: 50px; font-weight: 900;}
-#skills ul.skill{display: inline-block;}
-#skills ul.skill>li{
-    position: relative;
-    float: left;
-    font-size: 15px;
-    width:250px; height:250px;
-    color: #fff;
-    overflow: hidden;
-}
-#skills ul.skill li.html{background: url(../img/html.jpg) center no-repeat;}
-#skills ul.skill li.css{background: url(../img/css.jpg) center no-repeat;}
-#skills ul.skill li.js{background: url(../img/js.jpg) center no-repeat;}
-#skills ul.skill li.photoshop{background: url(../img/photo.jpg) center no-repeat;}
-#skills ul.skill li.illust{background: url(../img/illust.jpg) center no-repeat;}
-#skills ul.skill li ul {
-    position: absolute;
-    bottom: -250px; left: 0;
-    width: 250px; height: 250px;
-    padding: 60px 30px 60px 50px; box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.65);
-    transition: 1s;
-    text-align: left;
-}
-#skills ul.skill li ul li{list-style: square;}
-#skills ul.skill li:hover ul{bottom: 0;}
-#skills div:last-of-type{font-size: 20px; padding: 70px 0;}
-
 /* portfolio=================================================================================== */
 #portfolio{background: #eee;}
 #portfolio h2{padding-bottom: 80px; font-size: 50px; font-weight: 900;}
@@ -116,6 +87,7 @@ header nav ul li.active a{font-weight: 900;}
     transition: 0.7s;
 }
 #portfolio ul li a:hover{background: #666; color: #fff;}
+#portfolio .pf_des{padding-top:10px;}
 /* #contact====================================================================================== */
 #contact{
     background: #333; color: #fff; 
