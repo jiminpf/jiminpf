@@ -165,6 +165,9 @@ header .nav li.active a{
     background: #666; 
     color: #fff;
 }
+#portfolio .pf_des{
+    padding-top:10px;
+}
 /* #contact */
 #contact{
     background: #333; 
